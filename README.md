@@ -18,53 +18,58 @@ npm start
 
 ```
 fintrack/
-├── public/
-│   └── index.html
+├── index.html                  
+├── package.json               
+├── vite.config.js      
+│
+├── public/                    
+│   └── (images, icons, etc.)  
+│
 └── src/
-    ├── App.jsx                        # Root component
-    ├── index.js                       # Entry point
-    ├── index.css                      # Global styles + font import
+    ├── main.jsx                
+    ├── App.jsx               
+    ├── index.css             
     │
     ├── context/
-    │   └── AppContext.jsx             # useReducer + Context (global state)
+    │   └── AppContext.jsx      # Global state management (Context + useReducer)
     │
     ├── hooks/
-    │   ├── useApp.js                  # Convenience wrapper for AppContext
-    │   └── useFilteredTransactions.js # Memoized filter + sort logic
+    │   ├── useApp.js           # Custom hook to access AppContext easily
+    │   └── useFilteredTransactions.js # Memoized filtering + sorting logic
     │
     ├── data/
-    │   ├── constants.js               # Category names, colors, month labels
-    │   └── mockTransactions.js        # 30 seed transactions (Jan–Mar 2024)
+    │   ├── constants.js        # Static configs (categories, colors, labels)
+    │   └── mockTransactions.js # Seed/demo transaction data
     │
     ├── utils/
-    │   └── formatters.js              # fmt(), fmtDate(), genId()
+    │   └── formatters.js       # Helper functions (currency, date, ID generation)
     │
     └── components/
         ├── ui/
-        │   ├── Header.jsx             # Top bar: logo + role switcher
-        │   ├── NavTabs.jsx            # Overview / Transactions / Insights tabs
-        │   ├── Modal.jsx              # Reusable modal wrapper
-        │   └── SummaryCard.jsx        # Single KPI tile
+        │   ├── Header.jsx              # Top navigation (logo + role switcher)
+        │   ├── NavTabs.jsx             # Tab navigation (Overview, Transactions, Insights)
+        │   ├── Modal.jsx               # Reusable modal wrapper
+        │   └── SummaryCard.jsx         # KPI card (balance, income, expenses, etc.)
         │
         ├── charts/
-        │   ├── LineChart.jsx          # SVG area/line chart (balance trend)
-        │   ├── BarChart.jsx           # SVG grouped bar chart (monthly)
-        │   └── DonutChart.jsx         # SVG donut chart (spending breakdown)
+        │   ├── LineChart.jsx           # Balance trend (SVG line/area chart)
+        │   ├── BarChart.jsx            # Monthly comparison (grouped bars)
+        │   └── DonutChart.jsx          # Category breakdown (donut chart)
         │
         ├── dashboard/
-        │   └── Dashboard.jsx          # Overview page (cards + 3 charts)
+        │   └── Dashboard.jsx           # Overview page (cards + charts layout)
         │
         ├── transactions/
-        │   ├── Transactions.jsx       # Page — wires everything together
-        │   ├── TransactionFilters.jsx # Search + filter dropdowns + Add button
-        │   ├── TransactionTable.jsx   # Sortable table with Edit/Delete
-        │   └── TransactionForm.jsx    # Add / Edit form inside modal
+        │   ├── Transactions.jsx        # Main transactions page (state + layout)
+        │   ├── TransactionFilters.jsx  # Search, filter dropdowns, add button
+        │   ├── TransactionTable.jsx    # Sortable table with edit/delete actions
+        │   └── TransactionForm.jsx     # Add/Edit transaction form (inside modal)
         │
         └── insights/
-            ├── Insights.jsx           # Insights page
-            ├── InsightCards.jsx       # 4 KPI cards (top cat, avg, savings rate)
-            ├── MonthlyComparison.jsx  # Month-by-month table with savings bar
-            └── CategoryBreakdown.jsx  # Horizontal progress bars per category
+            ├── Insights.jsx            # Insights dashboard page
+            ├── InsightCards.jsx        # Key metrics (top category, avg spend, savings rate)
+            ├── MonthlyComparison.jsx   # Month-wise comparison with savings visualization
+            └── CategoryBreakdown.jsx   # Category-wise spending (progress bars)
 ```
 
 ---
