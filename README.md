@@ -2,7 +2,7 @@
 
 A clean, interactive personal finance dashboard built with React, created as a frontend developer intern assignment to visualize transactions, track spending, and compare financial trends in a polished UI.
 
-[Live Demo ](https://)
+[Live Demo ](https://finance-dashboard-zorvyn-gules.vercel.app/)
 ---
 
 ## Quick Start
