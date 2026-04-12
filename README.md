@@ -1,6 +1,6 @@
 # FinTrack — Finance Dashboard
 
-A clean, interactive personal finance dashboard built with React, created as a frontend developer intern assignment to visualize transactions, track spending, and compare financial trends in a polished UI.
+A clean, interactive personal finance dashboard built with React to visualize transactions, track spending, and compare financial trends in a polished UI.
 
 [Live Demo ](https://finance-dashboard-zorvyn-gules.vercel.app/)
 ---
